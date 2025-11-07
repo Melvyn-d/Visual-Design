@@ -1,0 +1,122 @@
+
+body {
+  margin: 0;
+  background-color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+  perspective: 1px;
+  transform-style: preserve-3d;
+}
+
+#navbar {
+  background-color: #301848;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.rectangle {
+margin-left: 50px;
+margin-top: 60px;
+  width: 500px;
+  height: 200px;
+  
+ justify-content: center;
+  
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+.card {
+  width: 325px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.2);
+}
+.card-content {
+  padding:16px;
+}
+.card-content h2{
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.card-content p{
+  font-size: 16px;
+  color: #474646;
+  line-height:1.3;
+}
+
+h1 {
+  text-align: center;
+  color: #3e1d5f;
+  font-size: 60px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+#cardanagari{
+  margin-right: 10px;
+  font-size:36px;
+  font-weight: bold;
+}
+
+p1 {
+  text-align: center;
+  color: #000000;
+  font-size: 20px;
+  
+}
+p2 {
+  font-size: 20px;
+}
+.section1, .section2 {
+  width:100%;
+  min-height:100vh;
+  position: relative;
+  transform-style: preserve-3d;
+  background:url("cityskyline.png") top center;
+  background-size: cover;
+  
+ 
+}
+
+.section1::before{
+  content:"";
+  width:100%;
+  height:100%;
+  position:absolute;
+
+}
+.section2 {
+  background: rgb(68, 35, 19)
+}
+
+.text{
+  top:30%;
+  left:50%;
+  position:absolute;
+  font-family: 'franklin gothic medium';
+  font-size: 15vw;
+  color:rgb(37, 4, 4);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3),
+  5px 5px 70px rgba(255,255,255,0.5);
+  transform: scale(1,1.1) translate(-50%,10%);
+
+}
