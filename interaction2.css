@@ -3,8 +3,8 @@ body {
   margin: 0;
   background-color: #f1f1f1;
   font-family: Arial, Helvetica, sans-serif;
-  perspective: 1px;
-  transform-style: preserve-3d;
+  justify-content: center;
+  margin-top: 100px;
 }
 
 #navbar {
@@ -32,11 +32,8 @@ body {
 }
 
 .rectangle {
-margin-left: 50px;
-margin-top: 60px;
-  width: 500px;
-  height: 200px;
-  
+  width: 1000px;
+  height: 150px;
  justify-content: center;
   
 }
@@ -66,57 +63,203 @@ margin-top: 60px;
 }
 
 h1 {
+  margin-top: 10px;
   text-align: center;
   color: #3e1d5f;
-  font-size: 60px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 200px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
+h2 {
+  text-align: center;
+  color: #301848;
+  font-size: 2.5rem;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #301848;
+  padding-bottom: 5px;
+}
+
+
 #cardanagari{
   margin-right: 10px;
   font-size:36px;
   font-weight: bold;
 }
 
-p1 {
+p {
+    text-align: center; 
+    line-height: 1.6; 
+    max-width: 800px; 
+    margin: 10px auto; 
+    font-size: 1.1rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width:100%;
+  gap: 20px;
+  border: #000000 solid 1px;
+}
+
+.letter {
+  background-color: pink;
+  font-size: 60px;
+  
+}
+
+.square {
+  width: 50px;
+  height: 100px;
+  background-color: #001ee0;
+}
+.oval {
+  width: 100px;
+  height: 50px;
+  background-color: #001ee0;
+  border-radius: 50%;
+  
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #001ee0;
+}
+
+ #talkbubble {
+      width: 120px;
+      height: 80px;
+      background: rgb(0, 0, 0);
+      position: relative;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+    #talkbubble:before {
+      content: "";
+      position: absolute;
+      right: 100%;
+      top: 26px;
+      width: 0;
+      height: 0;
+      border-top: 13px solid transparent;
+      border-right: 26px solid rgb(0, 0, 0);
+      border-bottom: 13px solid transparent;
+    }
+
+    .grid12 {
+      display: grid;
+      grid-template-columns: 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px;
+      width: 720px;
+      margin-left:auto;
+      margin-right:auto;
+      
+}
+
+.pronunciation-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 100%; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #301848; 
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap; 
+  z-index: 10; 
+  font-size: 14px; 
+  transition: opacity 0.3s, visibility 0.3s; 
+}
+
+.pronunciation-text::after {
+  content: "";
+  position: absolute;
+  top: 100%; 
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #301848 transparent transparent transparent; 
+}
+
+.grid12 div:hover .pronunciation-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.grid12 div {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  padding: 2px;
+  font-size: 30px;
   text-align: center;
-  color: #000000;
-  font-size: 20px;
-  
+  justify-content: center;
+  position:relative;
+  transition: all 0.2s ease-in-out;
 }
-p2 {
-  font-size: 20px;
+.grid12 div:hover {
+  background-color: black; 
+    color: white; 
+    transform: scale(1.1); x: 1;
+    z-index: 10; 
+    border-color: black;
 }
-.section1, .section2 {
-  width:100%;
-  min-height:100vh;
-  position: relative;
-  transform-style: preserve-3d;
-  background:url("cityskyline.png") top center;
-  background-size: cover;
-  
- 
-}
-
-.section1::before{
-  content:"";
-  width:100%;
-  height:100%;
-  position:absolute;
-
-}
-.section2 {
-  background: rgb(68, 35, 19)
+.numerals div {
+    background-color: #ffffff; /* Light purple for numerals */
+    color: #6a1b9a;
+    grid-template-columns: repeat(10, 1fr); 
 }
 
-.text{
-  top:30%;
-  left:50%;
-  position:absolute;
-  font-family: 'franklin gothic medium';
-  font-size: 15vw;
-  color:rgb(37, 4, 4);
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.3),
-  5px 5px 70px rgba(255,255,255,0.5);
-  transform: scale(1,1.1) translate(-50%,10%);
 
-}
+
+/* builds built for building */
+
+#rectangle-building {
+        background-color: rgb(191, 188, 188);
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+   .buildings {
+        width: 200px;
+        background-color: black;
+        align-self: flex-end;
+    }
+
+    .buildings:hover {
+        background-color: blue;
+    }
+
+    #building1 {
+        height: 600px;
+    }
+
+    #building2 {
+        height: 400px;
+        width: 50px;
+    }
+
+    #building3 {
+        height: 500px;
+    }
+
+    #building4 {
+        height: 300px;
+    }
+    
+    #building5 {
+        height: 700px;
+    }
+
+    #building6 {
+        height: 200px;
+    }
